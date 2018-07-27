@@ -45,11 +45,15 @@ Api returns an array of Posts that are in following format:
 
 ## Tasks
 
-You are required to complete the give code so that it data from these APIs every day and save into database.
+You are required to complete the code.
 
 You will to create following apis.
 
-### 1. Users API
+### 1. Scheduler
+
+Application should fetch the users and posts from above mentioned apis daily and save it to database.
+
+### 2. Users API
 This Api should list all users
 URL: http://localhost:8080/users
 Sample Response:
@@ -63,7 +67,7 @@ Sample Response:
 ]
 ~~~~
 
-### 2. Post API
+### 3. Post API
 
 This API should return the list of posts. This Api also accepts an optional url parameter 'userId'.
 
@@ -99,3 +103,12 @@ GET http://localhost:8080/posts?userId=1
    ...
 ]
 ~~~~
+
+### 4. Key based Security
+
+These above api calls should be secured with an api key, which is specified in application.properties.
+The key should be present in HTTP header in following format
+
+`X-Auth: KEY123`
+
+If this key is not passed or key doesn't match api should return a 403 Forbidden response.
