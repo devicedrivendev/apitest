@@ -53,8 +53,15 @@ You will to create following apis.
 
 Application should fetch the users and posts from above mentioned apis daily and save it to database.
 
+Hint: You can make of use existing code found in AppService.java, Also complete getData method in HttpApi.java.
+You may need to create required entity classes or Spring Data JPA Repositories.
+
+
 ### 2. Users API
-This Api should list all users
+This Api should list all users.
+
+Hint: Create required controller methods and service methods.
+
 URL: http://localhost:8080/users
 Sample Response:
 ~~~~
@@ -70,6 +77,8 @@ Sample Response:
 ### 3. Post API
 
 This API should return the list of posts. This Api also accepts an optional url parameter 'userId'.
+
+Hint: Create required controller methods and service methods.
 
 #### Example 1 without url parameter
 
@@ -112,3 +121,9 @@ The key should be present in HTTP header in following format
 `X-Auth: KEY123`
 
 If this key is not passed or key doesn't match api should return a 403 Forbidden response.
+
+Hint: Complete the code found in KeyAuthFilter.java
+
+### 5. Unit test
+
+Write unit tests for the code you write.
